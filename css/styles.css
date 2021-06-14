@@ -1,12 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu&display=swap');
 
-* {
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     font-family: 'Montserrat', sans-serif;
 }
 
 #title {
     background-color: #ff4c68;
     color: white;
+    padding: 0 10%;
+}
+
+.container-fluid  {
+    padding-right: 0;
+    padding-left: 0;
 }
 
 h1 {
@@ -14,8 +24,19 @@ h1 {
     line-height: 1.5;
 }
 
+h2 {
+    font-size: 3rem;
+    line-height: 1.5;
+    font-family: "Montserrat-Bold";
+}
+
+h3 {
+    font-family: "Montserrat-Bold";
+}
+
+/* puts some space between the navbar and the main page content */
 .navbar {
-    padding: 0 0 4.5rem;
+    padding-bottom: 4.5rem;
 }
 
 .navbar a {
@@ -29,17 +50,17 @@ h1 {
 }
 
 .nav-item {
-    padding: 0 0.9rem;
+    padding: 0 1.5rem;
+    font-family: "Montserrat";
+    font-weight: lighter;
 }
 
 .nav-link {
     font-size: 1.2rem;
-    font-family: 'Montserrat-Light';
 }
 
-.col-lg-6 {
-    padding: 0;
-}
+/* .first-page {
+} */
 
 .fab {
     margin-right: 0.4em;
@@ -51,27 +72,69 @@ h1 {
 
 .title-image {
     width: 60%;
-    transform: rotate(25%);    
+    transform: rotate(25deg);
 }
 
 #features {
-    margin: 5rem 0;
-}
-
-.col-lg-4 i {
+    padding: 7% 15%;
     text-align: center;
-    color: #ef8172;
+    z-index: 99;
 }
 
-.col-lg-4 i:hover {
+.feature-box {
+    padding: 5%;
+}
+
+.icon {
+    color: #ef8172;
+    margin-bottom: 1rem;
+}
+
+.icon:hover {
     color: #ff4c68;
 }
 
-.col-lg-4 h3 {
+.feature-box h3 {
     font-size: 1.5rem;
     font-family: 'Montserrat-bold';
 }
 
-.col-lg-4 p {
+.feature-box p {
     color: #8f8f8f;
+}
+
+.carousel-item {
+    padding: 7% 15%;
+}
+
+#testimonials {
+    text-align: center;
+    background-color: #ff4c68;
+    color: white;
+}
+
+.testimonial-image {
+    width: 10%;
+    border-radius: 50%;
+    margin: 1.5rem;
+}
+
+#press {
+    background-color: #ff4c68;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+#press img {
+    width: 15%;
+    margin: 2rem 2rem 4rem;
+}
+
+#pricing {
+    text-align: center;
+    padding: 5% 15%;
+}
+
+.plan-card {
+    padding: 3% 2%;
 }
