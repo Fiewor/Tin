@@ -45,6 +45,10 @@ h2 {
 }
 
 .navbar a {
+    color: rgb(251, 229, 232);
+}
+
+.navbar a:hover {
     color: var(--main-text-color);
 }
 
