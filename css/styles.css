@@ -1,17 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu&display=swap');
 
+:root {
+    --main-bg-color: #ff4c68;
+    --main-text-color: #fff;
+    --padding: 7% 15%;
+    --font-family: 'Montserrat', sans-serif;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 
 #title {
-    background-color: #ff4c68;
-    color: white;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
     padding: 0 10%;
+    text-align: left;
 }
 
 .container-fluid  {
@@ -19,19 +28,15 @@ body {
     padding-left: 0;
 }
 
-h1 {
-    font-size: 3.5rem;
+.big-heading {
+    font-family: var(--font-family);
+    font-size: 4.5rem;
     line-height: 1.5;
 }
 
 h2 {
     font-size: 3rem;
     line-height: 1.5;
-    font-family: "Montserrat-Bold";
-}
-
-h3 {
-    font-family: "Montserrat-Bold";
 }
 
 /* puts some space between the navbar and the main page content */
@@ -40,7 +45,7 @@ h3 {
 }
 
 .navbar a {
-    color: white;
+    color: var(--main-text-color);
 }
 
 .navbar-brand {
@@ -59,9 +64,6 @@ h3 {
     font-size: 1.2rem;
 }
 
-/* .first-page {
-} */
-
 .fab {
     margin-right: 0.4em;
 }
@@ -73,12 +75,15 @@ h3 {
 .title-image {
     width: 60%;
     transform: rotate(25deg);
+    position: relative;
+    right: -20%; 
 }
 
 #features {
-    padding: 7% 15%;
-    text-align: center;
-    z-index: 99;
+    padding: var(--padding);
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
 }
 
 .feature-box {
@@ -96,7 +101,6 @@ h3 {
 
 .feature-box h3 {
     font-size: 1.5rem;
-    font-family: 'Montserrat-bold';
 }
 
 .feature-box p {
@@ -104,13 +108,12 @@ h3 {
 }
 
 .carousel-item {
-    padding: 7% 15%;
+    padding: var(--padding);
 }
 
 #testimonials {
-    text-align: center;
-    background-color: #ff4c68;
-    color: white;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
 }
 
 .testimonial-image {
@@ -120,8 +123,7 @@ h3 {
 }
 
 #press {
-    background-color: #ff4c68;
-    text-align: center;
+    background-color: var(--main-bg-color);
     padding-bottom: 3%;
 }
 
@@ -131,10 +133,39 @@ h3 {
 }
 
 #pricing {
-    text-align: center;
     padding: 5% 15%;
 }
 
 .plan-card {
     padding: 3% 2%;
+}
+
+#cta {
+    background-color: #ff4c68;
+    color: #fff;
+    padding: var(--padding);
+}
+
+#footer {
+    text-align: center;
+    background-color: #fff;
+}
+
+.links {
+    padding: 2rem;
+}
+
+#footer p {
+    color: gray;
+}
+
+@media screen(max-width:1028px) {
+    #title {
+        text-align: center;
+    }
+
+    .title-image {
+        position: static;
+        transform: rotate(0);
+    }
 }
